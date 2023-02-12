@@ -1,0 +1,16 @@
+def jugar_pptls(jugada1, jugada2):
+    if jugada1 == jugada2:
+        resultado = "Empate"
+    elif (jugada1 == "Piedra" and (jugada2 == "Tijeras" or jugada2 == "Lagarto")) or \
+         (jugada1 == "Tijeras" and (jugada2 == "Papel" or jugada2 == "Lagarto")) or \
+         (jugada1 == "Papel" and (jugada2 == "Piedra" or jugada2 == "Spock")) or \
+         (jugada1 == "Lagarto" and (jugada2 == "Papel" or jugada2 == "Spock")) or \
+         (jugada1 == "Spock" and (jugada2 == "Piedra" or jugada2 == "Tijeras")):
+        resultado = jugada1
+    else:
+        resultado = jugada2
+
+    print(f"Entre {jugada1} y {jugada2}. Ha ganado {resultado}")
+    return resultado
+
+jugar_pptls("Spock", "Piedra")
